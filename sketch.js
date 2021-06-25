@@ -26,33 +26,31 @@ function setup(){
     console.log(ground);
 
     // Code for red box
-    var box1_options ={
-        isStatic: false,
-        restitution:0,
+    var redBox_options ={
+        isStatic: true,
     }
 
-    box1 = Bodies.rectangle(200,360,100,40,box1_options);
-    World.add(myworld,box1);
+    redBox = Bodies.rectangle(250,320,100,120,redBox_options);
+    World.add(myworld,redBox);
 
     // Code for green box
-    var box2_options ={
+    var greenBox_options ={
         isStatic: true,
-        
     }
 
-    box2 = Bodies.rectangle(450,320,50,140,box2_options);
-    World.add(myworld,box2);
+    greenBox = Bodies.rectangle(450,320,100,120,greenBox_options);
+    World.add(myworld,greenBox);
 
     // Code for yellow box
-    var box3_options ={
+    var yellowBox_options ={
         isStatic: true,
         angle:-Math.PI/4
         
     }
 
-    box3 = Bodies.rectangle(600,330,100,20,box3_options);
+    yellowBox = Bodies.rectangle(600,320,50,140,yellowBox_options);
     //Matter.Body.setAngle(box3,130)
-    World.add(myworld,box3);
+    World.add(myworld,yellowBox);
 
     // Code for ball
     var ball_options ={
@@ -87,13 +85,13 @@ function draw(){
     fill("brown")
     rect(ground.position.x,ground.position.y,800,20);
     fill("red")
-    rect(box1.position.x,box1.position.y,100,40);
+    rect(redBox.position.x,redBox.position.y,100,120);
     fill("green")
-    rect(box2.position.x,box2.position.y,50,120);
+    rect(greenBox.position.x,greenBox.position.y,100,120);
     
     fill("yellow")
     push();
-    translate(box3.position.x,box3.position.y);
+    translate(yellowBox.position.x,yellowBox.position.y);
     rotate(-45);
     rectMode(CENTER);
     rect(0, 0, 100, 20);
