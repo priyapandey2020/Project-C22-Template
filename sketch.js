@@ -5,7 +5,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 // Only for debugging code, is this needed, not otherwise
-const Render = Matter.Render;
+// const Render = Matter.Render;
 
 var myengine,myworld;
 var ground, ball;
